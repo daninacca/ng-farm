@@ -3,6 +3,18 @@ html {
   font-size: 62.5%; // Make sure 1rem = 10px
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
+
+  @media screen and (min-width: 768px) {
+    font-size: 80%;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-size: 90%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -45,9 +57,16 @@ button {
   cursor: pointer;
   height: fit-content;
   border-radius: var(--spacing-1);
+  font-size: var(--text-sm);
 
   &:focus {
     outline: none;
+  }
+
+  &.button-primary {
+    padding: var(--spacing-3) var(--spacing-4);
+    background-color: var(--color-primary);
+    color: var(--color-white);
   }
 }
 

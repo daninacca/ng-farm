@@ -1,0 +1,37 @@
+.profile {
+  > header {
+    margin-bottom: var(--spacing-5);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: var(--spacing-2) var(--spacing-3);
+
+    > label {
+      font-size: var(--text-sm);
+    }
+
+    > input {
+      width: fit-content;
+      min-width: 15rem;
+    }
+  }
+
+  .form-error {
+    margin-left: var(--spacing-3);
+    color: var(--color-danger);
+  }
+
+  button {
+    max-width: 10rem;
+    margin-top: var(--spacing-5);
+  }
+}

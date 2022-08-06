@@ -6,6 +6,7 @@
   --color-login: rgb(51, 0, 219);
   --color-border: rgb(230, 230, 230);
   --color-text-normal: rgb(64, 64, 64);
+  --color-danger: rgb(210, 24, 43);
 
   /* Spacing */
   --spacing-1: .4rem;          /* 4px */
@@ -29,6 +30,12 @@
   --text-md: 1.6rem;
   --text-lg: 2rem;
 
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
 
+  /* Customs */
   --nav-height: 6rem;
 }
