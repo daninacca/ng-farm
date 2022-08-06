@@ -7,4 +7,13 @@
     *ngFor="let product of products"
     [product]="product"
   ></app-product>
+
+  <h3 (click)="toggleCreateProduct()">
+    + Add new product
+  </h3>
+
+  <app-product-create
+    *ngIf="showCreateProduct"
+    [@inOutAnimation]
+  ></app-product-create>
 </article>

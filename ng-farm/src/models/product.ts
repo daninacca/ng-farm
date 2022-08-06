@@ -1,13 +1,20 @@
+// API gives strings for prices
+export interface APIProduct {
+  stock_id: number;
+  name: string;
+  description: string;
+  price: string;
+}
+
 export interface Product {
-  stock_id: string;
+  id?: string;
+  stock_id: number;
   name: string;
   description: string;
   price: number;
 }
 
-export interface APIProduct {
-  stock_id: string;
-  name: string;
-  description: string;
-  price: string;
+export interface Stock {
+  id: number,
+  name: string
 }

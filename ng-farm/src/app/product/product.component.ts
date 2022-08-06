@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from 'src/models/product';
+import { Product, Stock } from 'src/models/product';
 import { trigger, style, animate, transition } from '@angular/animations';
+import { ProductsService } from 'src/services/products.service';
 
 @Component({
   selector: 'app-product',
@@ -30,14 +31,31 @@ import { trigger, style, animate, transition } from '@angular/animations';
 })
 export class ProductComponent implements OnInit {
   @Input() product!: Product;
+  stock!: Stock | undefined;
   showEditProduct: Boolean = false;
 
-  constructor() { }
+  constructor(
+    private productService: ProductsService
+  ) {}
 
   ngOnInit(): void {
+    this.productService.fetchStocks()
+      .subscribe(stocks => {
+        this.productService.setStocks(stocks)
+        this.stock = this.productService.getStock(this.product.stock_id);
+      });
   }
 
   toggleEditProduct() {
     this.showEditProduct = !this.showEditProduct;
+  }
+
+  deleteProduct() {
+    if (this.product.id)
+      this.productService.deleteProduct(this.product.id)
+        .subscribe(() => {
+          if (this.product.id) // lol twice?
+            this.productService.removeProduct(this.product.id)
+        });
   }
 }

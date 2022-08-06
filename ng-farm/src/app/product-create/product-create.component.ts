@@ -1,15 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Product, Stock } from 'src/models/product';
+import { Stock } from 'src/models/product';
 import { ProductsService } from 'src/services/products.service';
 
 @Component({
-  selector: 'app-product-edit',
-  templateUrl: './product-edit.component.html',
-  styleUrls: ['./product-edit.component.scss']
+  selector: 'app-product-create',
+  templateUrl: './product-create.component.html',
+  styleUrls: ['./product-create.component.scss']
 })
-export class ProductEditComponent implements OnInit {
-  @Input() product!: Product;
+export class ProductCreateComponent implements OnInit {
   stocks!: Stock[];
 
   constructor(
@@ -17,7 +16,7 @@ export class ProductEditComponent implements OnInit {
     private productService: ProductsService
   ) {}
 
-  productEditForm = this.formBuilder.group({
+  productCreateForm = this.formBuilder.group({
     name: [
       '',
       [
@@ -48,12 +47,14 @@ export class ProductEditComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.productEditForm.valid && this.product.id) {
-      this.productService.putProduct(this.product.id, this.productEditForm.value)
-        .subscribe(product => {
-          const price = parseFloat(`${product.price}`.replace(/,/, '.'));
-          this.productService.updateProduct({ ...product, price: price })
-        });
+    if (this.productCreateForm.valid) {
+      this.productService.createProduct(this.productCreateForm.value)
+        .subscribe(
+          product => {
+            const price = parseFloat(`${product.price}`.replace(/,/, '.'));
+            this.productService.setProduct({ ...product, price: price });
+          }
+        );
     }
   }
 }

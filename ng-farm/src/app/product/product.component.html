@@ -1,20 +1,24 @@
 <section class="product">
   <header>
-    <h2>{{ product.name }}</h2>
-    <span>stock_id: {{ product.stock_id }}</span>
+    <h2>{{ product?.name }}</h2>
+    <span>In stock: {{ stock?.name }}</span>
   </header>
 
-  <p>{{ product.description }}</p>
+  <p>{{ product?.description }}</p>
 
   <footer>
-    <span>{{ product.price | currency:'EUR' }}</span>
-    <button type="button" (click)="toggleEditProduct()">Edit</button>
+    <div class="row">
+      <span>{{ product?.price | currency:'EUR' }}</span>
+      <button type="button" (click)="toggleEditProduct()">Edit</button>
+    </div>
+
+    <button type="button" (click)="deleteProduct()">Delete</button>
   </footer>
 
+
   <app-product-edit
+    *ngIf="showEditProduct"
+    [@inOutAnimation]
     [product]="product"
   ></app-product-edit>
 </section>
-
-*ngIf="showEditProduct"
-[@inOutAnimation]
