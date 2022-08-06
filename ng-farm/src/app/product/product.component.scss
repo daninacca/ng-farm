@@ -1,0 +1,30 @@
+.product {
+  position: relative;
+  margin: var(--spacing-6) 0;
+  padding: var(--spacing-6) var(--spacing-4);
+  box-shadow: var(--shadow);
+
+  > header {
+    display: flex;
+    align-items: center;
+
+    > span {
+      margin-left: auto;
+      font-style: italic;
+    }
+  }
+
+  > footer {
+    display: flex;
+
+    > button {
+      margin-left: auto;
+      border: none;
+      font-style: italic;
+
+      &:hover {
+        color: var(--color-grey)
+      }
+    }
+  }
+}

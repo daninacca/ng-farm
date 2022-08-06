@@ -10,8 +10,24 @@
     width: 12rem;
   }
 
+  &__page-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: var(--color-text-normal);
+    font-size: 1rem;
+    font-weight: bold;
+    border-left: 1px solid var(--color-border);
+    padding: 0 var(--spacing-4);
+    text-transform: uppercase;
+
+    &:hover, &:focus {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
+  }
+
   &__profile-link {
-    margin-left: auto;
     margin-right: var(--spacing-5);
     font-size: var(--text-sm);
   }
@@ -25,5 +41,9 @@
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  :nth-child(3) {
+    margin-left: auto;
   }
 }

@@ -1,0 +1,10 @@
+<article class="products-view">
+  <header>
+    <h1>Products</h1>
+  </header>
+
+  <app-product
+    *ngFor="let product of products"
+    [product]="product"
+  ></app-product>
+</article>

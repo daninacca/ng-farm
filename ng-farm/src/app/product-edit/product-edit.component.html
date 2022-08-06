@@ -1,0 +1,56 @@
+<div class="product-edit">
+  <h3>Edit this product:</h3>
+
+  <form [formGroup]="productEditForm">
+    <div class="form-group">
+      <label for="name">Product name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        required
+        formControlName="name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Product description:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        name="description"
+        required
+        formControlName="description"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Product price:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="price"
+        name="price"
+        required
+        formControlName="price"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Product stock_id:</label>
+      <select
+        type="text"
+        class="form-control"
+        id="price"
+        name="price"
+        required
+        formControlName="price"
+      >
+        <option>One</option>
+        <option>Two</option>
+      </select>
+    </div>
+  </form>
+</div>

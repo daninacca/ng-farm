@@ -9,7 +9,7 @@ import { User } from 'src/models/user';
 export class AuthenticationService {
   private user: User;
 
-  private httpOptions = {
+  public httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',
       'Accept': 'application/json'

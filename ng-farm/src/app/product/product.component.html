@@ -1,0 +1,20 @@
+<section class="product">
+  <header>
+    <h2>{{ product.name }}</h2>
+    <span>stock_id: {{ product.stock_id }}</span>
+  </header>
+
+  <p>{{ product.description }}</p>
+
+  <footer>
+    <span>{{ product.price | currency:'EUR' }}</span>
+    <button type="button" (click)="toggleEditProduct()">Edit</button>
+  </footer>
+
+  <app-product-edit
+    [product]="product"
+  ></app-product-edit>
+</section>
+
+*ngIf="showEditProduct"
+[@inOutAnimation]

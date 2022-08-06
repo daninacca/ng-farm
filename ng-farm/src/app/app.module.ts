@@ -11,13 +11,19 @@ import { LoginComponent } from './login/login.component';
 import { NavComponent } from './nav/nav.component';
 import { TokenInterceptorService } from '../services/token-interceptor.service';
 import { ProfileComponent } from './profile/profile.component';
+import { ProductsViewComponent } from './products-view/products-view.component';
+import { ProductComponent } from './product/product.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProductsViewComponent,
+    ProductComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
