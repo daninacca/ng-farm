@@ -10,12 +10,15 @@
   width: 30rem;
   height: 25rem;
   border-radius: var(--spacing-1);
+  background-color: var(--color-white);
 
   header {
     margin-bottom: var(--spacing-3);
   }
 
   form {
+    display: flex;
+    flex-direction: column;
     font-size: var(--text-sm);
 
     .form-group {
@@ -32,6 +35,12 @@
       > .form-control {
         width: 15rem;
       }
+    }
+
+    > button {
+      padding: var(--spacing-2) var(--spacing-4);
+      margin-top: var(--spacing-2);
+      margin-left: auto;
     }
   }
 }

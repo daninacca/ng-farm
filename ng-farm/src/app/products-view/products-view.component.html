@@ -3,6 +3,10 @@
     <h1>Products</h1>
   </header>
 
+  <div *ngIf="!products?.length">
+    <p>Please log in to view our products</p>
+  </div>
+
   <app-product
     *ngFor="let product of products"
     [product]="product"
@@ -13,7 +17,7 @@
   </h3>
 
   <app-product-create
-    *ngIf="showCreateProduct"
+    *ngIf="showCreateProduct && products?.length"
     [@inOutAnimation]
   ></app-product-create>
 </article>

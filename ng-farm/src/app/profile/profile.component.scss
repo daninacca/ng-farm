@@ -1,4 +1,8 @@
 .profile {
+  background-color: var(--color-white);
+  padding: var(--spacing-6);
+  width: fit-content;
+
   > header {
     margin-bottom: var(--spacing-5);
   }

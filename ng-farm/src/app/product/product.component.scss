@@ -3,6 +3,7 @@
   margin: var(--spacing-6) 0;
   padding: var(--spacing-6) var(--spacing-4);
   box-shadow: var(--shadow);
+  background-color: var(--color-white);
 
   > header {
     display: flex;
@@ -35,5 +36,9 @@
         color: var(--color-grey)
       }
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 50rem;
   }
 }

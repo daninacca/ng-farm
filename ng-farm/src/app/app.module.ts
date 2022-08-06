@@ -15,6 +15,7 @@ import { ProductsViewComponent } from './products-view/products-view.component';
 import { ProductComponent } from './product/product.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
+import { HomComponent } from './hom/hom.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProductCreateComponent } from './product-create/product-create.componen
     ProductsViewComponent,
     ProductComponent,
     ProductEditComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    HomComponent
   ],
   imports: [
     BrowserModule,
