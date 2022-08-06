@@ -1,0 +1,33 @@
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: var(--nav-height);
+  box-shadow: var(--shadow);
+
+  &__logo {
+    height: 100%;
+    width: 12rem;
+  }
+
+  &__profile-link {
+    margin-left: auto;
+    margin-right: var(--spacing-5);
+    font-size: var(--text-sm);
+  }
+
+  &__login-button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin-right: var(--spacing-4);
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--text-sm);
+    border-radius: var(--spacing-5);
+  }
+
+  &__login-popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
