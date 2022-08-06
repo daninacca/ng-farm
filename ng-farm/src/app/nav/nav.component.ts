@@ -48,6 +48,7 @@ export class NavComponent {
       () => {
         this.authenticationService.setUser('');
         localStorage.removeItem('user');
+        location.reload();
       }
     )
   }

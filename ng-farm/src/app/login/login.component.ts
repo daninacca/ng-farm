@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
       user => {
         this.authenticationService.setUser(user.token);
         this.closeLoginEvent.emit(true);
+        location.reload();
       }
     );
   }
